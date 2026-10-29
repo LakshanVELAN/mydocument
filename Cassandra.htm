@@ -1,0 +1,153 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0in;
+	font-size:10.0pt;
+	font-family:"Times New Roman",serif;}
+.MsoChpDefault
+	{font-size:10.0pt;}
+@page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-US style='word-wrap:break-word'>
+
+<div class=WordSection1>
+
+<p class=MsoNormal><span style='font-size:16.0pt'>Cassandra:</span></p>
+
+<p class=MsoNormal><span style='font-size:16.0pt'>(start the docker desktop)</span></p>
+
+<p class=MsoNormal><span style='font-size:16.0pt'> First cmd la container
+create pananum by using <br>
+</span><i><span style='font-size:12.0pt'>docker run -d --name cassandra -p
+9042:9042 cassandra:latest</span></i></p>
+
+<p class=MsoNormal><span style='font-size:16.0pt'> Second start pananum create
+pana containeraa </span></p>
+
+<p class=MsoNormal><i><span style='font-size:12.0pt'>docker start Cassandra</span></i></p>
+
+<p class=MsoNormal><span style='font-size:16.0pt'>then enter into CQL by</span></p>
+
+<p class=MsoNormal><i><span style='font-size:12.0pt'>docker exec -it cassandra
+cqlsh</span></i></p>
+
+<p class=MsoNormal><i><span style='font-size:12.0pt'>&nbsp;</span></i></p>
+
+<p class=MsoNormal><span style='font-size:16.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:16.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:16.0pt'>hive:</span></p>
+
+<p class=MsoNormal><span style='font-size:16.0pt'>(start the docker desktop)</span></p>
+
+<p class=MsoNormal><span style='font-size:16.0pt'>1 : </span><i><span
+style='font-size:12.0pt'>docker pull apache/hive:4.2.1</span></i></p>
+
+<p class=MsoNormal><span style='font-size:16.0pt'>2 : </span><i><span
+style='font-size:12.0pt'>docker run -d -p 10000:10000 -p 10002:10002 --env
+SERVICE_NAME=hiveserver2 --name hiveserver2 apache/hive:4.2.1</span></i></p>
+
+<p class=MsoNormal><span style='font-size:16.0pt'>3 : </span><i><span
+style='font-size:12.0pt'>docker start hiveserver2</span></i></p>
+
+<p class=MsoNormal><span style='font-size:16.0pt'>4 : </span><i><span
+style='font-size:12.0pt'>docker exec -it hiveserver2 beeline -u
+&quot;jdbc:hive2://localhost:10000/&quot;</span></i></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>You get : 0: jdbc:hive2://localhost:10000/&gt; </p>
+
+<p class=MsoNormal><span style='font-size:16.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:16.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:16.0pt'>Hbase:</span></p>
+
+<p class=MsoNormal><span style='font-size:16.0pt'> </span><span
+style='font-size:12.0pt'>1 : git clone https://github.com/apache/hbase.git</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt'>2</span><span
+style='font-size:16.0pt'> : </span><i><span style='font-size:12.0pt'>cd
+hbase\dev-support\hbase_docker</span></i></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt'>3: bash build-hbase.sh --tag
+master</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt'>4: docker run --platform
+linux/amd64 -it --rm hbase_local</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:16.0pt'>Hadoop:</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt'>docker --version</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt'>docker compose version</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt'>docker info</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt'>cd %USERPROFILE%\Desktop</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt'>git clone
+https://github.com/big-data-europe/docker-hadoop.git</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt'>cd docker-hadoop</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt'>docker compose up -d</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt'>docker ps</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt'>eg comman :</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt'>docker exec -it namenode hdfs
+dfsadmin -report</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal><b><span style='font-size:16.0pt'>&nbsp;</span></b></p>
+
+<p class=MsoNormal><b><span style='font-size:16.0pt'>pig:</span></b></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt'>docker run -it
+suhothayan/hadoop-spark-pig-hive:2.9.2 bash</span></p>
+
+</div>
+
+</body>
+
+</html>
